@@ -1,0 +1,270 @@
+
+---
+
+```css
+/* ============================================================
+   style.css — adapted from the "Pollination Suitability Mapping for Crops" style
+   (typography + boxes preserved; GeoSense content unchanged)
+   ============================================================ */
+
+/* --- typography & body --- */
+body {
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  line-height: 1.72;
+  color: #1a1a1a;
+}
+
+h1.title {
+  font-size: 2rem;
+  color: #003366;
+}
+
+h2 {
+  color: #003366;
+  border-bottom: 1px solid #ccd6e0;
+  padding-bottom: 6px;
+  margin-top: 48px;
+}
+
+h3 {
+  color: #1a3a5c;
+  margin-top: 28px;
+}
+
+h4 {
+  color: #444;
+  font-style: italic;
+}
+
+/* --- links --- */
+a {
+  color: #0b4f8a;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- blockquote --- */
+blockquote {
+  border-left: 4px solid #003366;
+  padding: 8px 16px;
+  background: #f5f8fc;
+  color: #333;
+  font-style: italic;
+  margin: 16px 0;
+}
+
+/* --- figures & images --- */
+figcaption, .figure-caption {
+  text-align: center;
+  font-size: 0.82rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Specific styling for mobile app mockups */
+.mobile-img {
+  max-width: 320px !important; /* Constrains it to a realistic phone width */
+  border: 1px solid #e0e0e0;
+}
+
+.app-shot {
+  border-radius: 18px;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.10);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* --- general tables --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.94rem;
+}
+
+thead th {
+  background: #003366;
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #dde;
+}
+
+tbody tr:nth-child(even) td {
+  background: #f5f8fc;
+}
+
+/* --- persona box --- */
+.persona-box {
+  background: #f0f6ff;
+  border-left: 4px solid #003366;
+  padding: 16px 20px;
+  margin: 16px 0 24px;
+  border-radius: 0 6px 6px 0;
+}
+
+/* --- story box --- */
+.story-box {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 12px 18px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.story-box strong {
+  display: block;
+  font-size: 0.83rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+/* --- section intro box (optional if you use later) --- */
+.sect-intro {
+  background: #f0f6f0;
+  border-left: 4px solid #2e7d32;
+  padding: 11px 18px;
+  margin-bottom: 18px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+
+/* --- code fold toggle styling --- */
+details.code-fold summary {
+  background: #1e3a5c;
+  color: #e8eef8;
+  padding: 8px 14px;
+  border-radius: 8px 8px 0 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+details.code-fold[open] summary {
+  background: #003366;
+}
+details.code-fold pre {
+  background: #1a2942;
+  color: #c9d7e8;
+  border-radius: 0 0 8px 8px;
+  margin-top: 0;
+}
+
+/* ============================================================
+   Enhanced "Use of genAI" table styling
+   - Rounded card
+   - Shadow
+   - Hover highlight
+   - Centered Xs
+   - More width for first column
+   ============================================================ */
+
+.genai-card {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 14px;
+  padding: 14px 14px 6px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  margin: 16px 0 22px;
+}
+
+.genai-card table {
+  margin: 0;
+  table-layout: fixed;
+}
+
+.genai-card thead th {
+  background: #003366;
+  color: #fff;
+  border-bottom: 0;
+}
+
+.genai-card th:first-child,
+.genai-card td:first-child {
+  width: 46%;
+}
+
+.genai-card th:nth-child(2),
+.genai-card th:nth-child(3),
+.genai-card td:nth-child(2),
+.genai-card td:nth-child(3) {
+  text-align: center;
+  width: 12%;
+  font-weight: 700;
+}
+
+.genai-card th:last-child,
+.genai-card td:last-child {
+  width: 30%;
+}
+
+.genai-card tbody tr:hover td {
+  background: #edf3ff;
+  transition: background 120ms ease-in-out;
+}
+
+.genai-card td {
+  vertical-align: top;
+}
+
+/* --- Columnas lado a lado para imágenes de móvil --- */
+.columns {
+  display: flex;
+  justify-content: center; /* Centra las imágenes en la página */
+  gap: 30px; /* Espacio entre las dos imágenes */
+  margin: 2rem 0;
+}
+
+.column {
+  flex: 0 1 auto; /* Evita que la columna se estire para llenar la página */
+  text-align: center; /* Centra el contenido */
+}
+
+/* Reducción drástica del tamaño de las imágenes */
+.column img {
+  width: auto;
+  max-width: 200px !important; /* <--- Ajuste principal: reduce el tamaño máximo */
+  height: auto;
+  border-radius: 12px; /* Redondea los bordes para dar efecto de celular */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Añade una sombra suave */
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- print: hide code, keep figures --- */
+@media print {
+  details.code-fold { display: none; }
+  .quarto-figure { page-break-inside: avoid; }
+  a { color: #000 !important; text-decoration: none !important; }
+
+  /* --- Reglas específicas para impresión/PDF --- */
+  /* 1. Forza el salto de página SOLO antes del título de Referencias */
+  h2#references {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+
+  /* 2. Asegura que el bloque de texto NO vuelva a saltar y se quede con su título */
+  #refs {
+    page-break-before: auto !important;
+    break-before: auto !important;
+  }
+}
